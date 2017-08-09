@@ -1,0 +1,53 @@
+body {
+	font-size: 34px;
+	color: white;
+	background-color: #2f2f2f;
+	margin: 5px;
+}
+
+#clock{
+    text-align: center;
+    
+    margin: auto;
+    width: 100%;
+   
+    padding: 10px;
+    color: white;
+    /* border: 3px solid green;  */
+}
+
+#barre{
+    
+    height: 100px;
+    /*border: 3px solid #ff0058;*/
+}
+
+.btn-group{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 3px solid green; */
+}
+
+#titre{
+    text-align: center;
+    margin-bottom: 200px;
+   /* border: 3px solid green; */
+}
+
+.progress {
+    background: rgba(214, 214, 214, 1); 
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(214, 214, 214, 1) 100%); 
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(214, 214, 214, 1) 100%); 
+    border: 0px solid rgba(245, 245, 245, 1); 
+    border-radius: 10px; 
+    height: 100px;
+}
+
+
+
+.barre {
+    background: rgba(65, 158, 240, 1); 
+    background: -webkit-linear-gradient(top, rgba(60, 122, 176, 1) 0%, rgba(65, 158, 240, 1) 100%); 
+    background: linear-gradient(to bottom, rgba(60, 122, 176, 1) 0%, rgba(65, 158, 240, 1) 100%);
+}
