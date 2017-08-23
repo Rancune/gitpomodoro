@@ -43,15 +43,26 @@
 /*######################################*/      
 /*Fonction pour la barre de progression */        
 /*######################################*/   
-   /*    
-       function moveout(etat) {
+      
+        var id,t;
+        
+        
+    function launch(etat){
+           
+        var t = setTimeout(moveOut(1),1000);
+        var etate = etat;
+        
+       function moveOut(etate) {
             var elem = document.getElementById("barre");
-            var width = taille;
-            var id = setInterval(frame, 1000); 
-            var rest = 0.33+'%';
-            var work = 0.05+'%';
-            var longrest = 0.165+'%';
+            var width = 0;
+            var rest = 50;/* 0.33 pour 25 min*/
+            var work = 20;/* 0.05 pour 5 min*/
+            var longrest = 10;/* 0.165 pour 10 min*/
             var compteur = 0;
+           
+            clearInterval(id);
+           
+            var id = setInterval(frame, 1000); 
 
 
             function frame() {
@@ -59,30 +70,49 @@
                 if(etat == 1){
                     if (width >= 100 ) {
                         clearInterval(id);
-                        moverest(20, 1000, 0); 
+                        launch(2);
                     } else {
                         width = width + work;
-                        elem.style.width = width + '%';
+                        elem.style.width = width +'%';
+                        
                 } 
                 }else if(etat == 2){
                     if (width >= 100 ) {
                         clearInterval(id);
-                        moverest(20, 1000, 0); 
+                        launch(1);
                     } else {
                         width = width + rest;
-                        elem.style.width = width + '%';
+                        elem.style.width = width +'%';
                 } 
                 }else{
                     width = width + longrest;
-                    elem.style.width = width + '%';
+                    elem.style.width = width +'%';
                 }
   
             }
             
         } 
+     }    
         
+        function start() {
+            clearTimeout(t);
+            launch(1);
+            
+        }
+
+        function pause() {
+           
+            clearTimeout(t);
+        }
+
+        function next() {
+            
+            clearTimeout(t);
+           launch(2);
+
+        }
         
-   */     
+    /* 
         
         function move(pourcent, interval, taille=0.5) {
             var elem = document.getElementById("barre");
@@ -105,25 +135,12 @@
             
         }
 
+       */    
 
-        function start() {
-            move(0.05, 1000, 0);/* 0.05*/
-        }
 
-        function pause() {
-           
-            
-        }
-
-        function next() {
-            move(0.33, 1000,0 ); /* 0.33 */
-            
-           
-
-        }
         
         
-/* Fonction move pour la barre progression pause */
+/* Fonction move pour la barre progression pause 
         
         function moverest(pourcent, interval, taille=0.5){
             var elem = document.getElementById("barre");
@@ -144,7 +161,7 @@
                 }
             }
         }
-        
+*/
         
     </script>
 
