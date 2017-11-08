@@ -5,6 +5,14 @@ body {
 	margin: 5px;
 }
 
+
+#name{
+    opacity: 0;
+}
+
+h1{
+    opacity: 0;
+}
 #clock{
     text-align: center;
     
